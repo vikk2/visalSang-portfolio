@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS Portfolio | Contact</title>
+    <meta
+      name="description"
+      content="Contact page for a third-year Computer Science student portfolio."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="contact">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html">Weesal</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html" class="is-active">Contact</a>
+        </nav>
+      </header>
+
+      <main class="contact-layout">
+        <section class="intro-block reveal">
+          <p class="eyebrow">Contact</p>
+          <h1>Let’s connect for projects, collaboration, or internships.</h1>
+        </section>
+
+        <section class="contact-stack">
+          <article class="card reveal delay-1">
+            <h2>Contact Details</h2>
+            <p>Email: visalsang2698@gmail.com</p>
+            <p>GitHub: github.com/vikk22</p>
+            <p>LinkedIn: linkedin.com/in/visal-sang</p>
+          </article>
+
+          <article class="card reveal delay-2">
+            <h2>Quick Message</h2>
+            <form class="contact-form">
+              <label>
+                Name
+                <input type="text" placeholder="Your name" />
+              </label>
+              <label>
+                Email
+                <input type="email" placeholder="you@example.com" />
+              </label>
+              <label>
+                Message
+                <textarea rows="4" placeholder="Write a short message"></textarea>
+              </label>
+              <button class="button primary" type="submit">Send</button>
+            </form>
+          </article>
+
+          <!-- <article class="card reveal delay-3">
+            <h2>Local Token Saver</h2>
+            <p>
+              This stores a token only in your browser on this device using
+              local storage. It is not sent anywhere.
+            </p>
+            <form class="token-form">
+              <label>
+                Token
+                <input
+                  id="token-input"
+                  type="password"
+                  placeholder="Paste a token to save locally"
+                  autocomplete="off"
+                />
+              </label>
+              <div class="token-actions">
+                <button class="button primary" type="submit">Save Token</button>
+                <button class="button secondary" id="clear-token" type="button">
+                  Clear Token
+                </button>
+              </div>
+              <p class="status-text" id="token-status">No token saved yet.</p>
+            </form> -->
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

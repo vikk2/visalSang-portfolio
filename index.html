@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CS Portfolio | Home</title>
+    <title>CS Portfolio | Weesal</title>
     <meta
       name="description"
       content="Minimal portfolio for a third-year Computer Science student."
@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -30,57 +30,220 @@
           <span></span>
         </button>
         <nav class="site-nav">
-          <a href="index.html" class="is-active">Home</a>
-          <a href="about.html">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="contact.html">Contact</a>
+          <a href="#home" class="is-active">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </nav>
       </header>
 
       <main>
-        <section class="hero">
-          <p class="eyebrow reveal">Third-year Computer Science Student</p>
+        <section class="hero" id="home">
+          <p class="hero-topline reveal">Weesal / Computer Science / Frontend</p>
           <h1 class="reveal delay-1">
-            I design and build clean digital experiences with code.
+            Building calm, editorial-feeling interfaces with code.
           </h1>
-          <p class="hero-copy reveal delay-2">
-            Focused on frontend development, problem solving, and turning ideas
-            into practical products with a modern, minimal approach.
-          </p>
+          <div class="hero-meta reveal delay-2">
+            <p class="hero-copy">
+              Third-year Computer Science student focused on frontend work,
+              clean structure, and thoughtful digital experiences.
+            </p>
+            <p class="hero-note">Based in Cambodia. Available for internships.</p>
+          </div>
           <div class="hero-actions reveal delay-3">
-            <a class="button primary" href="projects.html">View Projects</a>
-            <a class="button secondary" href="contact.html">Contact Me</a>
+            <a class="text-link" href="#projects">View selected work</a>
+            <a class="text-link" href="#contact">Start a conversation</a>
+          </div>
+          <div class="hero-orbit reveal delay-4">
+            <span>minimal</span>
+            <span>structured</span>
+            <span>quietly expressive</span>
           </div>
         </section>
 
-        <!-- <section class="feature-grid">
-          <article class="card reveal">
-            <p class="card-label">01</p>
-            <h2>Frontend First</h2>
-            <p>
-              Building responsive interfaces with attention to motion,
-              spacing, and clarity.
-            </p>
-          </article>
+        <section class="single-section editorial-section" id="about">
+          <div class="section-heading reveal">
+            <p class="section-mark">About Me</p>
+            <h1>Simple on the surface, precise underneath.</h1>
+          </div>
 
-          <article class="card reveal delay-1">
-            <p class="card-label">02</p>
-            <h2>CS Foundation</h2>
-            <p>
-              Studying algorithms, data structures, databases, and software
-              engineering as part of a strong technical base.
-            </p>
-          </article>
+          <div class="editorial-columns">
+            <div class="editorial-copy reveal delay-1">
+              <p>
+                I build responsive interfaces with a focus on clarity,
+                hierarchy, and restraint.
+              </p>
+            </div>
+            <div class="editorial-list reveal delay-2">
+              <div>
+                <span>Focus</span>
+                <p>Frontend, UI structure, web design</p>
+              </div>
+              <div>
+                <span>Learning</span>
+                <p>JavaScript, databases, software systems</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-          <article class="card reveal delay-2">
-            <p class="card-label">03</p>
-            <h2>Always Shipping</h2>
-            <p>
-              Learning by building personal projects, refining details, and
-              improving from feedback.
-            </p>
-          </article>
-        </section> -->
+        <section class="single-section editorial-section" id="projects">
+          <div class="section-heading reveal">
+            <p class="section-mark">Selected Work</p>
+            <h1>Projects that shaped how I think about product and interface.</h1>
+          </div>
+
+          <div class="project-list">
+            <article class="project-entry reveal delay-1">
+              <div class="project-index">01</div>
+              <div class="project-main">
+                <div class="project-heading">
+                  <h2>Cloning Nomad List</h2>
+                  <span>HTML / CSS / JavaScript</span>
+                </div>
+                <p class="project-summary">
+                  A frontend clone focused on layout rhythm and responsive browsing.
+                </p>
+              </div>
+              <div class="project-link">
+                <a
+                  class="text-link"
+                  href="https://vikk2.github.io/NomadList-clone/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open project</a
+                >
+              </div>
+            </article>
+
+            <article class="project-entry reveal delay-2">
+              <div class="project-index">02</div>
+              <div class="project-main">
+                <div class="project-heading">
+                  <h2>Cloning Remote OK</h2>
+                  <span>HTML / CSS / JavaScript</span>
+                </div>
+                <p class="project-summary">
+                  A job-board rebuild designed around density, scanning, and clarity.
+                </p>
+              </div>
+              <div class="project-link">
+                <a
+                  class="text-link"
+                  href="https://vikk2.github.io/remoteok-clone/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open project</a
+                >
+              </div>
+            </article>
+
+            <article class="project-entry reveal delay-3">
+              <div class="project-index">03</div>
+              <div class="project-main">
+                <div class="project-heading">
+                  <h2>Cloning Wip.co</h2>
+                  <span>HTML / CSS / JavaScript</span>
+                </div>
+                <p class="project-summary">
+                  A visual recreation exploring startup-style hierarchy and layout.
+                </p>
+              </div>
+              <div class="project-link">
+                <a
+                  class="text-link"
+                  href="https://vikk2.github.io/wipco-clone/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Open project</a
+                >
+              </div>
+            </article>
+
+            <article class="project-entry reveal delay-4">
+              <div class="project-index">04</div>
+              <div class="project-main">
+                <div class="project-heading">
+                  <h2>Askly</h2>
+                  <span>Laravel / Tailwind CSS / MySQL</span>
+                </div>
+                <p class="project-summary">
+                  A knowledge-sharing platform built across frontend and Laravel logic.
+                </p>
+              </div>
+              <div class="project-link project-link-static">
+                <span>Case study on request</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="single-section editorial-section contact-section" id="contact">
+          <div class="section-heading reveal">
+            <p class="section-mark">Contact</p>
+            <h1>Open to internships, collaborations, and thoughtful digital work.</h1>
+          </div>
+
+          <div class="contact-layout">
+            <div class="contact-copy reveal delay-1">
+              <p>For internships, freelance work, or collaborations.</p>
+            </div>
+            <div class="contact-stack reveal delay-2">
+              <div class="contact-card">
+                <p class="contact-card-label">Direct Links</p>
+                <div class="contact-details">
+                  <p>
+                    <span>Email</span>
+                    <a class="contact-link" href="mailto:visalsang2698@gmail.com"
+                      >visalsang2698@gmail.com</a
+                    >
+                  </p>
+                  <p>
+                    <span>GitHub</span>
+                    <a
+                      class="contact-link"
+                      href="https://github.com/vikk2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >github.com/vikk2</a
+                    >
+                  </p>
+                  <p>
+                    <span>LinkedIn</span>
+                    <a
+                      class="contact-link"
+                      href="https://linkedin.com/in/visal-sang"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >linkedin.com/in/visal-sang</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="contact-card">
+                <p class="contact-card-label">Quick Message</p>
+                <form class="contact-form">
+                  <label>
+                    Name
+                    <input type="text" placeholder="Your name" />
+                  </label>
+                  <label>
+                    Email
+                    <input type="email" placeholder="you@example.com" />
+                  </label>
+                  <label>
+                    Message
+                    <textarea
+                      rows="4"
+                      placeholder="Write a short message"
+                    ></textarea>
+                  </label>
+                  <button class="button button-line" type="submit">Send</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
 

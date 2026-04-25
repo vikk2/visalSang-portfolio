@@ -1,5 +1,7 @@
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
+const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
+const sections = document.querySelectorAll("main section[id]");
 
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
@@ -7,6 +9,17 @@ if (navToggle && siteNav) {
     navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 }
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (siteNav && siteNav.classList.contains("is-open")) {
+      siteNav.classList.remove("is-open");
+      if (navToggle) {
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    }
+  });
+});
 
 window.addEventListener("load", () => {
   document.body.classList.add("is-loaded");
@@ -30,6 +43,29 @@ if ("IntersectionObserver" in window) {
   reveals.forEach((item) => observer.observe(item));
 } else {
   reveals.forEach((item) => item.classList.add("is-visible"));
+}
+
+if (navLinks.length && sections.length && "IntersectionObserver" in window) {
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        const activeId = `#${entry.target.id}`;
+        navLinks.forEach((link) => {
+          link.classList.toggle("is-active", link.getAttribute("href") === activeId);
+        });
+      });
+    },
+    {
+      rootMargin: "-35% 0px -45% 0px",
+      threshold: 0.1,
+    }
+  );
+
+  sections.forEach((section) => navObserver.observe(section));
 }
 
 const contactForm = document.querySelector(".contact-form");

@@ -3,6 +3,15 @@ const siteNav = document.querySelector(".site-nav");
 const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
 const sections = document.querySelectorAll("main section[id]");
 
+const closeNav = () => {
+  if (!siteNav || !navToggle) {
+    return;
+  }
+
+  siteNav.classList.remove("is-open");
+  navToggle.setAttribute("aria-expanded", "false");
+};
+
 if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
     const isOpen = siteNav.classList.toggle("is-open");
@@ -13,12 +22,21 @@ if (navToggle && siteNav) {
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     if (siteNav && siteNav.classList.contains("is-open")) {
-      siteNav.classList.remove("is-open");
-      if (navToggle) {
-        navToggle.setAttribute("aria-expanded", "false");
-      }
+      closeNav();
     }
   });
+});
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeNav();
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 720) {
+    closeNav();
+  }
 });
 
 window.addEventListener("load", () => {
